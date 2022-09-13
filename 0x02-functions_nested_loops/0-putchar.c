@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <main.h>
 int main(void)
 /*Program to print _putchar
  * Return -Always 0
