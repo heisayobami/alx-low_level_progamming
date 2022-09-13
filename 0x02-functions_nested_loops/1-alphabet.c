@@ -2,7 +2,7 @@
 /**
  * print_alphabet - prints the alphabets jn lowercase
  * followed by a new line
- * Return: Always 0
+ * Return: Always void
  */
 void print_alphabet(void)
 {
@@ -11,7 +11,5 @@ void print_alphabet(void)
 		{
 			_putchar(x);
 		}
-		_putchar('\n');
-			
-	return (0);
+		_putchar('\n');;
 }
