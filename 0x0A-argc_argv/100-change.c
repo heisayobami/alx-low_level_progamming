@@ -5,7 +5,7 @@
  * main - checks for valid input
  * @argc: argument count
  * @argv: argument vector
- * Description: prints the minimum number of coins to make change for an amount of money
+ * Description: prints the minimum number of coins
  * Return: 1 on success, otherwise return 0
  **/
 
