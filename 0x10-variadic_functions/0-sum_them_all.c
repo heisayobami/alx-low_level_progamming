@@ -4,9 +4,10 @@
 
 /**
  * sum_them_all - Entry Point
- * @n: total number of variadic inputs
+ * @n: variadic inputs
  * Return: sum of all arguments
  */
+
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list ap;
