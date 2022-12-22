@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdlib.h>
 
 /**
  * free_listint_safe - frees a listint_t linked list
@@ -13,7 +14,7 @@ size_t	free_listint_safe(listint_t **head)
 
 	if (*head)
 	{
-		while (*head && interval(begin, *head, count))
+		while (*head && h)
 		{
 			tmp = (*head)->next;
 			*head = tmp;
