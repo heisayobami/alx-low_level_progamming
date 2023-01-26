@@ -7,40 +7,23 @@
 
 void hash_table_delete(hash_table_t *ht)
 {
-unsigned long int i;
-hash_node_t *node;
-
-if (ht == NULL)
-	return;
-
-for (i = 0; i < ht->size; i++)
-{
-	node = ht->array[i];
-	free_hash_list(node);
-}
-free(ht->array);
-free(ht);
-}
-
-
-/**
- * free_hash_list - frees a hash_node_t list
- * @head: head of linked list
- */
-
-void free_hash_list(hash_node_t *head)
-{
-	hash_node_t *current;
-	hash_node_t *next;
-
-	current = head;
-
-	while (current != NULL)
-	{
-		next = current->next;
-		free(current->key);
-		free(current->value);
-		free(current);
-		current = next;
-	}
+    if (ht==NULL)
+        return;
+	
+    hash_node_t *prevnode, *nextnode;
+    
+    for (int index=0; index<ht->size; index++)
+    {
+        prevnode = nextnode = ht->array[index];
+        while (nextnode!=NULL)
+        {
+            nextnode = prevnode->next;
+            free(prevnode->value);
+            free(prevnode->key);
+            free(prevnode);
+            prevnode = nextnode;
+        }
+    }
+    free(ht->array);
+    free(ht);
 }
